@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Bayan</title>
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!--FONTS AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- STYLE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="title">CSS Bayan</h2>
+        <div class="block">
+            <button class="accordion">BMW</button>
+            <div class="panel"><img src="images/bmw-m8-coupe-onepager-sp-desktop.jpg" alt="BMW" class="img"></div>
+            <div class="panel">
+            </div>
+
+            <button class="accordion">AUDI</button>
+            <div class="panel"><img src="images/audi.jpeg" alt="AUDI" class="img"></div>
+            <div class="panel">
+            </div>
+
+            <button class="accordion">BUGATTI</button>
+            <div class="panel"><img src="images/bugatti.jpg" alt="BUGATTI" class="img"></div>
+            <div class="panel">
+            </div>
+
+            <button class="accordion">CAMARO</button>
+            <div class="panel"><img src="images/2019-chevrolet-camaro-2-0t-1le-6mt-106-1539790974.jpg" alt="CAMARO"
+                    class="img"></div>
+            <div class="panel">
+            </div>
+
+            <button class="accordion">URUS</button>
+            <div class="panel"><img src="images/usur.jpg" alt="URUS" class="img"></div>
+            <div class="panel">
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+        let acc = document.getElementsByClassName("accordion");
+        let i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
